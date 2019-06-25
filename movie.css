@@ -1,0 +1,46 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    font-size: 50px;
+}
+
+.container {
+    background-color: #212227;
+    padding: 50px;
+    width: 500px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+.container .form-group .form-control{
+    font-family: 'Montserrat', sans-serif;
+    color: #212227;
+}
+
+.container div .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #212227;
+    background-color: white;
+    margin: 10px;
+}
+
+.container div .btn:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #212227;
+}
+
+#result {
+    color: white;
+}
+
+img {
+    height: auto;
+    width: auto;
+}
+

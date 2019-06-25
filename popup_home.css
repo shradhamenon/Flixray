@@ -1,0 +1,34 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.container {
+    background-color: #212227;
+    padding: 50px;
+    width: 500px;
+    height: auto;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+.container a {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #212227;
+    font-weight: 300;
+}
+.container a:hover{
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #212227;
+    font-weight: 300;
+}
+
+
