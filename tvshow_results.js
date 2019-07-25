@@ -19,7 +19,7 @@ submit.addEventListener("click", function () {
         let words = tvshow.split(/\W+/);
         let tvURL = words.join("%20");
 
-        let searchURL = "https://api.themoviedb.org/3/search/tv?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US&query=" + tvURL + "&page=1&first_air_date_year=" + year;
+        let searchURL = "https://api.themoviedb.org/3/search/tv?api_key=&language=en-US&query=" + tvURL + "&page=1&first_air_date_year=" + year;
 
         let xhr = new XMLHttpRequest();
 
@@ -34,7 +34,7 @@ submit.addEventListener("click", function () {
 
                 document.querySelector("#image").innerHTML = '<img src="http://image.tmdb.org/t/p/w300/' + poster_path + '">';
 
-                let tmdbURL = "https://api.themoviedb.org/3/tv/" + id + "?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US"
+                let tmdbURL = "https://api.themoviedb.org/3/tv/" + id + "?api_key=&language=en-US"
                 console.log(tmdbURL);
 
                 let xhrtmdb = new XMLHttpRequest();
@@ -53,7 +53,7 @@ submit.addEventListener("click", function () {
                 }
                 xhrtmdb.send();
 
-                let castURL = "https://api.themoviedb.org/3/tv/" + id + "/credits?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US";
+                let castURL = "https://api.themoviedb.org/3/tv/" + id + "/credits?api_key=&language=en-US";
 
 
                 let xhr_cast = new XMLHttpRequest();
@@ -85,7 +85,7 @@ submit.addEventListener("click", function () {
         let words = tvshow.split(/\W+/);
         let tvURL = words.join("%20");
 
-        let searchURL = "https://api.themoviedb.org/3/search/tv?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US&query=" + tvURL + "&page=1&first_air_date_year=" + year;
+        let searchURL = "https://api.themoviedb.org/3/search/tv?api_key=&language=en-US&query=" + tvURL + "&page=1&first_air_date_year=" + year;
 
         let xhr = new XMLHttpRequest();
 
@@ -97,7 +97,7 @@ submit.addEventListener("click", function () {
                 let tmdbdata = JSON.parse(this.responseText).results[0];
                 let id = tmdbdata.id;
 
-                let tmdbURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US"
+                let tmdbURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "?api_key=&language=en-US"
 
                 let xhrtmdb = new XMLHttpRequest();
 
@@ -113,7 +113,7 @@ submit.addEventListener("click", function () {
                         }
                         document.querySelector("#result").innerHTML = '<ul class="list-group"><li class="list-group-item list-group-item-dark"> <strong>Title: </strong>' + tmdbdata.name + '</li><li class="list-group-item list-group-item-dark"> <strong>Season: </strong>' + data.season_number + '</li><li class="list-group-item list-group-item-dark"> <strong>Air Date: </strong>' + data.air_date + '</li><li class="list-group-item list-group-item-dark"> <strong>Number Of Episodes: </strong>' + data.episodes.length + '</li></ul>';
 
-                        let castURL = "https://api.themoviedb.org/3/tv/" + id + "/credits?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US";
+                        let castURL = "https://api.themoviedb.org/3/tv/" + id + "/credits?api_key=&language=en-US";
 
 
                         let xhr_cast = new XMLHttpRequest();
@@ -148,7 +148,7 @@ submit.addEventListener("click", function () {
         let words = tvshow.split(/\W+/);
         let tvURL = words.join("%20");
 
-        let searchURL = "https://api.themoviedb.org/3/search/tv?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US&query=" + tvURL + "&page=1&first_air_date_year=" + year;
+        let searchURL = "https://api.themoviedb.org/3/search/tv?api_key=&language=en-US&query=" + tvURL + "&page=1&first_air_date_year=" + year;
 
         let xhr = new XMLHttpRequest();
 
@@ -160,7 +160,7 @@ submit.addEventListener("click", function () {
                 let tmdbdata = JSON.parse(this.responseText).results[0];
                 let id = tmdbdata.id;
 
-                let tmdbURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US"
+                let tmdbURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "?api_key=&language=en-US"
 
                 let xhrtmdb = new XMLHttpRequest();
 
@@ -175,7 +175,7 @@ submit.addEventListener("click", function () {
                         } else {
                             document.querySelector("#image").innerHTML = '<img src="http://image.tmdb.org/t/p/w300/' + tmdbdata.poster_path + '">';
                         }
-                        let episodeURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "/episode/" + episode + "?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US";
+                        let episodeURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "/episode/" + episode + "?api_key=&language=en-US";
 
                         let xhrepisode = new XMLHttpRequest();
 
@@ -188,7 +188,7 @@ submit.addEventListener("click", function () {
                                 document.querySelector("#still").innerHTML = '<img src="http://image.tmdb.org/t/p/w300/' + data.still_path + '">';
 
 
-                                let castURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "/episode/" + episode + "/credits?api_key=8a80aa54812dcf19c30c6f1942c5684c"
+                                let castURL = "https://api.themoviedb.org/3/tv/" + id + "/season/" + season + "/episode/" + episode + "/credits?api_key="
 
                                 let xhr_cast = new XMLHttpRequest();
 
