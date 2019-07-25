@@ -14,7 +14,7 @@ submit.addEventListener("click", function () {
     let words = movieTitle.split(/\W+/);
     let movieURL = words.join("+");
 
-    let searchURL = "http://www.omdbapi.com/?t=" + movieURL + "&y=" + yearValue + "&apikey=thewdb";
+    let searchURL = "http://www.omdbapi.com/?t=" + movieURL + "&y=" + yearValue + "&apikey=";
 
 
     let xhr = new XMLHttpRequest();
@@ -28,7 +28,7 @@ submit.addEventListener("click", function () {
         document.querySelector("#result").innerHTML = '<ul class="list-group"><li class="list-group-item list-group-item-dark"> <strong>Title: </strong>' + data.Title + '</li><li class="list-group-item list-group-item-dark"> <strong>Director: </strong>' + data.Director + '</li><li class="list-group-item list-group-item-dark"> <strong>Main Cast: </strong>' + data.Actors + '</li><li class="list-group-item list-group-item-dark"> <strong>Release Year: </strong>' + data.Year + '</li><li class="list-group-item list-group-item-dark"> <strong>Genre: </strong>' + data.Genre + '</li><li class="list-group-item list-group-item-dark"> <strong>Plot: </strong>' + data.Plot + '</li> <li class="list-group-item list-group-item-dark"><strong>IMDb</strong>: '+ data.imdbRating + '</li><li class="list-group-item list-group-item-dark"> <strong>Awards: </strong>' + data.Awards + '</li></ul>';
         let imdbID = data.imdbID;
         
-        let posterURL = "https://api.themoviedb.org/3/movie/" + imdbID + "?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US";
+        let posterURL = "https://api.themoviedb.org/3/movie/" + imdbID + "?api_key=&language=en-US";
 
 
         let xhr_poster = new XMLHttpRequest();
@@ -46,7 +46,7 @@ submit.addEventListener("click", function () {
         xhr_poster.send();
 
 
-        let castURL = "https://api.themoviedb.org/3/movie/" + imdbID + "/credits?api_key=8a80aa54812dcf19c30c6f1942c5684c";
+        let castURL = "https://api.themoviedb.org/3/movie/" + imdbID + "/credits?api_key=";
 
 
         let xhr_cast = new XMLHttpRequest();
