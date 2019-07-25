@@ -10,7 +10,7 @@ submit.addEventListener("click", function () {
 
     let names = actor.split(/\W+/);
     let actorSearchURL = names.join("%20");
-    let URL = "https://api.themoviedb.org/3/search/person?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US&query=" + actorSearchURL + "&page=1&include_adult=false";
+    let URL = "https://api.themoviedb.org/3/search/person?api_key=&language=en-US&query=" + actorSearchURL + "&page=1&include_adult=false";
     let xhr = new XMLHttpRequest();
 
     xhr.open("GET", URL, true);
@@ -22,7 +22,7 @@ submit.addEventListener("click", function () {
             let personID = result.id;
 
             let xhr_actor = new XMLHttpRequest();
-            let actorURL = "https://api.themoviedb.org/3/person/" + personID + "?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US";
+            let actorURL = "https://api.themoviedb.org/3/person/" + personID + "?api_key=&language=en-US";
             xhr_actor.open("GET", actorURL, true);
 
             xhr_actor.onload = function () {
@@ -30,7 +30,7 @@ submit.addEventListener("click", function () {
                     let data = JSON.parse(this.responseText);
 
                     let xhr_image = new XMLHttpRequest();
-                    let imageURL = "https://api.themoviedb.org/3/person/" + personID + "/images?api_key=8a80aa54812dcf19c30c6f1942c5684c";
+                    let imageURL = "https://api.themoviedb.org/3/person/" + personID + "/images?api_key=";
                     xhr_image.open("GET", imageURL, true);
 
                     xhr_image.onload = function () {
@@ -45,7 +45,7 @@ submit.addEventListener("click", function () {
 
 
                     let xhr_credits = new XMLHttpRequest();
-                    let creditURL = "https://api.themoviedb.org/3/person/" + personID + "/combined_credits?api_key=8a80aa54812dcf19c30c6f1942c5684c&language=en-US";
+                    let creditURL = "https://api.themoviedb.org/3/person/" + personID + "/combined_credits?api_key=&language=en-US";
                     xhr_credits.open("GET", creditURL, true);
 
                     xhr_credits.onload = function () {
